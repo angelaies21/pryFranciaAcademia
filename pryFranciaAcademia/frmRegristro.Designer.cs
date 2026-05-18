@@ -40,6 +40,11 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRegristar = new System.Windows.Forms.Button();
             this.cmbPlan = new System.Windows.Forms.ComboBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblInicioSesion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -95,7 +100,7 @@
             // 
             this.txtCodigo.Location = new System.Drawing.Point(143, 80);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(148, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(74, 20);
             this.txtCodigo.TabIndex = 5;
             // 
             // txtNombre
@@ -107,7 +112,7 @@
             // 
             // btnListado
             // 
-            this.btnListado.BackColor = System.Drawing.Color.LavenderBlush;
+            this.btnListado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnListado.Location = new System.Drawing.Point(20, 309);
             this.btnListado.Name = "btnListado";
             this.btnListado.Size = new System.Drawing.Size(83, 31);
@@ -117,7 +122,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.Location = new System.Drawing.Point(130, 309);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 31);
@@ -127,28 +132,70 @@
             // 
             // btnRegristar
             // 
-            this.btnRegristar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnRegristar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRegristar.Location = new System.Drawing.Point(253, 309);
             this.btnRegristar.Name = "btnRegristar";
             this.btnRegristar.Size = new System.Drawing.Size(77, 31);
             this.btnRegristar.TabIndex = 9;
             this.btnRegristar.Text = "Regristar";
             this.btnRegristar.UseVisualStyleBackColor = false;
+            this.btnRegristar.Click += new System.EventHandler(this.btnRegristar_Click);
             // 
             // cmbPlan
             // 
             this.cmbPlan.FormattingEnabled = true;
+            this.cmbPlan.Items.AddRange(new object[] {
+            "Plan 1",
+            "Plan 2",
+            "Plan 3"});
             this.cmbPlan.Location = new System.Drawing.Point(143, 189);
             this.cmbPlan.Name = "cmbPlan";
             this.cmbPlan.Size = new System.Drawing.Size(148, 21);
             this.cmbPlan.TabIndex = 10;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(103, 28);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(161, 28);
+            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "LA ACADEMIA";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblInicioSesion,
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 358);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(375, 22);
+            this.statusStrip1.TabIndex = 12;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblInicioSesion
+            // 
+            this.lblInicioSesion.Name = "lblInicioSesion";
+            this.lblInicioSesion.Size = new System.Drawing.Size(88, 17);
+            this.lblInicioSesion.Text = "inicio de sesion";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // frmRegristro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(363, 354);
+            this.ClientSize = new System.Drawing.Size(375, 380);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmbPlan);
             this.Controls.Add(this.btnRegristar);
             this.Controls.Add(this.btnCancelar);
@@ -162,7 +209,11 @@
             this.Controls.Add(this.lblCodigo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegristro";
-            this.Text = "frmRegristro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Datos";
+            this.Load += new System.EventHandler(this.frmRegristro_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +232,9 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRegristar;
         private System.Windows.Forms.ComboBox cmbPlan;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblInicioSesion;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

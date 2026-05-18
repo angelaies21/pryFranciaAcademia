@@ -12,9 +12,27 @@ namespace pryFranciaAcademia
 {
     public partial class frmInicio : Form
     {
+        public DateTime varInicioSesion;
+
         public frmInicio()
         {
             InitializeComponent();
+        }
+
+        private void btIniciar_Click(object sender, EventArgs e)
+        {
+           
+            varInicioSesion = DateTime.Now; //iniciando la variable
+            
+            this.Hide();
+            frmRegristro regristro = new frmRegristro();
+            regristro.varInicioSesion=DateTime.Now;
+            regristro.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

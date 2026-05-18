@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListado));
             this.rbTodo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbCódigo = new System.Windows.Forms.RadioButton();
-            this.rbPlan = new System.Windows.Forms.RadioButton();
-            this.rbNombre = new System.Windows.Forms.RadioButton();
-            this.txtCódigo = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.cmbPlan = new System.Windows.Forms.ComboBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCódigo = new System.Windows.Forms.TextBox();
+            this.rbNombre = new System.Windows.Forms.RadioButton();
+            this.rbPlan = new System.Windows.Forms.RadioButton();
+            this.tbCódigo = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,27 +67,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
             // 
-            // tbCódigo
+            // cmbPlan
             // 
-            this.tbCódigo.AutoSize = true;
-            this.tbCódigo.Location = new System.Drawing.Point(41, 92);
-            this.tbCódigo.Name = "tbCódigo";
-            this.tbCódigo.Size = new System.Drawing.Size(58, 17);
-            this.tbCódigo.TabIndex = 1;
-            this.tbCódigo.TabStop = true;
-            this.tbCódigo.Text = "Código";
-            this.tbCódigo.UseVisualStyleBackColor = true;
+            this.cmbPlan.FormattingEnabled = true;
+            this.cmbPlan.Location = new System.Drawing.Point(127, 183);
+            this.cmbPlan.Name = "cmbPlan";
+            this.cmbPlan.Size = new System.Drawing.Size(146, 21);
+            this.cmbPlan.TabIndex = 6;
             // 
-            // rbPlan
+            // txtNombre
             // 
-            this.rbPlan.AutoSize = true;
-            this.rbPlan.Location = new System.Drawing.Point(45, 179);
-            this.rbPlan.Name = "rbPlan";
-            this.rbPlan.Size = new System.Drawing.Size(46, 17);
-            this.rbPlan.TabIndex = 2;
-            this.rbPlan.TabStop = true;
-            this.rbPlan.Text = "Plan";
-            this.rbPlan.UseVisualStyleBackColor = true;
+            this.txtNombre.Location = new System.Drawing.Point(127, 137);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(146, 20);
+            this.txtNombre.TabIndex = 5;
+            // 
+            // txtCódigo
+            // 
+            this.txtCódigo.Location = new System.Drawing.Point(127, 92);
+            this.txtCódigo.Name = "txtCódigo";
+            this.txtCódigo.Size = new System.Drawing.Size(146, 20);
+            this.txtCódigo.TabIndex = 4;
             // 
             // rbNombre
             // 
@@ -100,27 +100,27 @@
             this.rbNombre.Text = "Nombre";
             this.rbNombre.UseVisualStyleBackColor = true;
             // 
-            // txtCódigo
+            // rbPlan
             // 
-            this.txtCódigo.Location = new System.Drawing.Point(127, 92);
-            this.txtCódigo.Name = "txtCódigo";
-            this.txtCódigo.Size = new System.Drawing.Size(146, 20);
-            this.txtCódigo.TabIndex = 4;
+            this.rbPlan.AutoSize = true;
+            this.rbPlan.Location = new System.Drawing.Point(45, 179);
+            this.rbPlan.Name = "rbPlan";
+            this.rbPlan.Size = new System.Drawing.Size(46, 17);
+            this.rbPlan.TabIndex = 2;
+            this.rbPlan.TabStop = true;
+            this.rbPlan.Text = "Plan";
+            this.rbPlan.UseVisualStyleBackColor = true;
             // 
-            // txtNombre
+            // tbCódigo
             // 
-            this.txtNombre.Location = new System.Drawing.Point(127, 137);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(146, 20);
-            this.txtNombre.TabIndex = 5;
-            // 
-            // cmbPlan
-            // 
-            this.cmbPlan.FormattingEnabled = true;
-            this.cmbPlan.Location = new System.Drawing.Point(127, 183);
-            this.cmbPlan.Name = "cmbPlan";
-            this.cmbPlan.Size = new System.Drawing.Size(146, 21);
-            this.cmbPlan.TabIndex = 6;
+            this.tbCódigo.AutoSize = true;
+            this.tbCódigo.Location = new System.Drawing.Point(41, 92);
+            this.tbCódigo.Name = "tbCódigo";
+            this.tbCódigo.Size = new System.Drawing.Size(58, 17);
+            this.tbCódigo.TabIndex = 1;
+            this.tbCódigo.TabStop = true;
+            this.tbCódigo.Text = "Código";
+            this.tbCódigo.UseVisualStyleBackColor = true;
             // 
             // frmListado
             // 
@@ -131,7 +131,8 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListado";
-            this.Text = "frmListado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Listado";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
