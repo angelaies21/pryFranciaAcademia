@@ -1,6 +1,6 @@
 ﻿namespace pryFranciaAcademia
 {
-    partial class frmRegristro
+    partial class frmRegistro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegristro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistro));
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPlan = new System.Windows.Forms.Label();
@@ -38,13 +38,10 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnListado = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnRegristar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.cmbPlan = new System.Windows.Forms.ComboBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblInicioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -130,16 +127,16 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnRegristar
+            // btnRegistrar
             // 
-            this.btnRegristar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRegristar.Location = new System.Drawing.Point(253, 309);
-            this.btnRegristar.Name = "btnRegristar";
-            this.btnRegristar.Size = new System.Drawing.Size(77, 31);
-            this.btnRegristar.TabIndex = 9;
-            this.btnRegristar.Text = "Regristar";
-            this.btnRegristar.UseVisualStyleBackColor = false;
-            this.btnRegristar.Click += new System.EventHandler(this.btnRegristar_Click);
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRegistrar.Location = new System.Drawing.Point(253, 309);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(77, 31);
+            this.btnRegistrar.TabIndex = 9;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegristar_Click);
             // 
             // cmbPlan
             // 
@@ -167,28 +164,13 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblInicioSesion,
-            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 358);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(375, 22);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // lblInicioSesion
-            // 
-            this.lblInicioSesion.Name = "lblInicioSesion";
-            this.lblInicioSesion.Size = new System.Drawing.Size(88, 17);
-            this.lblInicioSesion.Text = "inicio de sesion";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // frmRegristro
+            // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,7 +179,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmbPlan);
-            this.Controls.Add(this.btnRegristar);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnListado);
             this.Controls.Add(this.txtNombre);
@@ -208,12 +190,10 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmRegristro";
+            this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos";
             this.Load += new System.EventHandler(this.frmRegristro_Load);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,11 +210,9 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnListado;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnRegristar;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.ComboBox cmbPlan;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel lblInicioSesion;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

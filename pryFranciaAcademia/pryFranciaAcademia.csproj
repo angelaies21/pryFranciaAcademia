@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCargaPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargaPlan.Designer.cs">
+      <DependentUpon>frmCargaPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,22 +64,25 @@
     <Compile Include="frmListado.Designer.cs">
       <DependentUpon>frmListado.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegristro.cs">
+    <Compile Include="frmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegristro.Designer.cs">
-      <DependentUpon>frmRegristro.cs</DependentUpon>
+    <Compile Include="frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCargaPlan.resx">
+      <DependentUpon>frmCargaPlan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListado.resx">
       <DependentUpon>frmListado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegristro.resx">
-      <DependentUpon>frmRegristro.cs</DependentUpon>
+    <EmbeddedResource Include="frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

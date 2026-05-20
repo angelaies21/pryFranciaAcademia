@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListado));
             this.rbTodo = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpBuscar = new System.Windows.Forms.GroupBox();
             this.cmbPlan = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCódigo = new System.Windows.Forms.TextBox();
             this.rbNombre = new System.Windows.Forms.RadioButton();
             this.rbPlan = new System.Windows.Forms.RadioButton();
             this.tbCódigo = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
+            this.grpBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
             // rbTodo
@@ -51,21 +51,21 @@
             this.rbTodo.Text = "Todo";
             this.rbTodo.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grpBuscar
             // 
-            this.groupBox1.Controls.Add(this.cmbPlan);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.txtCódigo);
-            this.groupBox1.Controls.Add(this.rbNombre);
-            this.groupBox1.Controls.Add(this.rbPlan);
-            this.groupBox1.Controls.Add(this.tbCódigo);
-            this.groupBox1.Controls.Add(this.rbTodo);
-            this.groupBox1.Location = new System.Drawing.Point(32, 26);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(307, 228);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar";
+            this.grpBuscar.Controls.Add(this.cmbPlan);
+            this.grpBuscar.Controls.Add(this.txtNombre);
+            this.grpBuscar.Controls.Add(this.txtCódigo);
+            this.grpBuscar.Controls.Add(this.rbNombre);
+            this.grpBuscar.Controls.Add(this.rbPlan);
+            this.grpBuscar.Controls.Add(this.tbCódigo);
+            this.grpBuscar.Controls.Add(this.rbTodo);
+            this.grpBuscar.Location = new System.Drawing.Point(32, 26);
+            this.grpBuscar.Name = "grpBuscar";
+            this.grpBuscar.Size = new System.Drawing.Size(307, 228);
+            this.grpBuscar.TabIndex = 1;
+            this.grpBuscar.TabStop = false;
+            this.grpBuscar.Text = "Buscar";
             // 
             // cmbPlan
             // 
@@ -128,13 +128,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(368, 287);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpBuscar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpBuscar.ResumeLayout(false);
+            this.grpBuscar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -142,7 +142,7 @@
         #endregion
 
         private System.Windows.Forms.RadioButton rbTodo;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpBuscar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCódigo;
         private System.Windows.Forms.RadioButton rbNombre;

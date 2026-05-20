@@ -25,7 +25,7 @@ namespace pryFranciaAcademia
             varInicioSesion = DateTime.Now; //iniciando la variable
             
             this.Hide();
-            frmRegristro regristro = new frmRegristro();
+            frmRegistro regristro = new frmRegistro();
             regristro.varInicioSesion=DateTime.Now;
             regristro.ShowDialog();
         }

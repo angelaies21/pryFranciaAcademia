@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace pryFranciaAcademia
 {
-    public partial class frmRegristro : Form
+    public partial class frmRegistro : Form
     {
         public DateTime varInicioSesion;
 
-        int varInicio;
+        int varCodigo;
         string varNombre;
-        string VvarPlan;
+        string varPlan;
         bool varActivo;
 
-        public frmRegristro()
+        public frmRegistro()
         {
             InitializeComponent();
         }
@@ -37,6 +37,10 @@ namespace pryFranciaAcademia
 
         private void btnRegristar_Click(object sender, EventArgs e)
         {
+            frmRegistro ventana = new frmRegistro();
+            ventana.Show();
+            this.Hide();
+
             if (txtCodigo.Text == "")
             {
                 MessageBox.Show("Ingrese el código.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -54,12 +58,28 @@ namespace pryFranciaAcademia
             }
             else
             {
-                string codigo = txtCodigo.Text.Trim();
-                string nombre = txtNombre.Text.Trim();
-                string plan = cmbPlan.Text;
-                string 
+                //varCodigo = Convert.ToInt32(txtCodigo.Text);
+                //varNombre = txtNombre.Text.Trim();
+                //varPlan = cmbPlan.Text;
+                
+                int indiceFila =0;
+                string[,] matMaterias = new string[2,5];
 
+                matMaterias[indiceFila,0]= txtCodigo.Text;
+                matMaterias[indiceFila, 1] = txtNombre.Text;
+                matMaterias[indiceFila, 2] = cmbPlan.Text;
 
+                if (chkActivo.Checked == true)
+                {
+                    matMaterias[indiceFila, 3] = "Activo";
+                    varActivo = true;
+                }
+                else
+                {
+                    matMaterias[indiceFila, 3] = "Inactivo";
+                    varActivo=false;
+                }
+                indiceFila++;
             }
         }
     }
