@@ -37,13 +37,20 @@
             this.rbNombre = new System.Windows.Forms.RadioButton();
             this.rbPlan = new System.Windows.Forms.RadioButton();
             this.tbCódigo = new System.Windows.Forms.RadioButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBuscar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // rbTodo
             // 
             this.rbTodo.AutoSize = true;
-            this.rbTodo.Location = new System.Drawing.Point(41, 42);
+            this.rbTodo.Location = new System.Drawing.Point(77, 19);
             this.rbTodo.Name = "rbTodo";
             this.rbTodo.Size = new System.Drawing.Size(50, 17);
             this.rbTodo.TabIndex = 0;
@@ -53,6 +60,7 @@
             // 
             // grpBuscar
             // 
+            this.grpBuscar.Controls.Add(this.btnBuscar);
             this.grpBuscar.Controls.Add(this.cmbPlan);
             this.grpBuscar.Controls.Add(this.txtNombre);
             this.grpBuscar.Controls.Add(this.txtCódigo);
@@ -60,9 +68,9 @@
             this.grpBuscar.Controls.Add(this.rbPlan);
             this.grpBuscar.Controls.Add(this.tbCódigo);
             this.grpBuscar.Controls.Add(this.rbTodo);
-            this.grpBuscar.Location = new System.Drawing.Point(32, 26);
+            this.grpBuscar.Location = new System.Drawing.Point(12, 12);
             this.grpBuscar.Name = "grpBuscar";
-            this.grpBuscar.Size = new System.Drawing.Size(307, 228);
+            this.grpBuscar.Size = new System.Drawing.Size(274, 194);
             this.grpBuscar.TabIndex = 1;
             this.grpBuscar.TabStop = false;
             this.grpBuscar.Text = "Buscar";
@@ -70,21 +78,21 @@
             // cmbPlan
             // 
             this.cmbPlan.FormattingEnabled = true;
-            this.cmbPlan.Location = new System.Drawing.Point(127, 183);
+            this.cmbPlan.Location = new System.Drawing.Point(99, 125);
             this.cmbPlan.Name = "cmbPlan";
             this.cmbPlan.Size = new System.Drawing.Size(146, 21);
             this.cmbPlan.TabIndex = 6;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(127, 137);
+            this.txtNombre.Location = new System.Drawing.Point(99, 83);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(146, 20);
             this.txtNombre.TabIndex = 5;
             // 
             // txtCódigo
             // 
-            this.txtCódigo.Location = new System.Drawing.Point(127, 92);
+            this.txtCódigo.Location = new System.Drawing.Point(99, 42);
             this.txtCódigo.Name = "txtCódigo";
             this.txtCódigo.Size = new System.Drawing.Size(146, 20);
             this.txtCódigo.TabIndex = 4;
@@ -92,7 +100,7 @@
             // rbNombre
             // 
             this.rbNombre.AutoSize = true;
-            this.rbNombre.Location = new System.Drawing.Point(41, 137);
+            this.rbNombre.Location = new System.Drawing.Point(13, 86);
             this.rbNombre.Name = "rbNombre";
             this.rbNombre.Size = new System.Drawing.Size(62, 17);
             this.rbNombre.TabIndex = 3;
@@ -103,7 +111,7 @@
             // rbPlan
             // 
             this.rbPlan.AutoSize = true;
-            this.rbPlan.Location = new System.Drawing.Point(45, 179);
+            this.rbPlan.Location = new System.Drawing.Point(13, 125);
             this.rbPlan.Name = "rbPlan";
             this.rbPlan.Size = new System.Drawing.Size(46, 17);
             this.rbPlan.TabIndex = 2;
@@ -114,7 +122,7 @@
             // tbCódigo
             // 
             this.tbCódigo.AutoSize = true;
-            this.tbCódigo.Location = new System.Drawing.Point(41, 92);
+            this.tbCódigo.Location = new System.Drawing.Point(13, 42);
             this.tbCódigo.Name = "tbCódigo";
             this.tbCódigo.Size = new System.Drawing.Size(58, 17);
             this.tbCódigo.TabIndex = 1;
@@ -122,19 +130,64 @@
             this.tbCódigo.Text = "Código";
             this.tbCódigo.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Código,
+            this.Nombre,
+            this.Plan,
+            this.Activo});
+            this.dataGridView1.Location = new System.Drawing.Point(292, 21);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(443, 150);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(182, 165);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // Código
+            // 
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Plan
+            // 
+            this.Plan.HeaderText = "Plan";
+            this.Plan.Name = "Plan";
+            // 
+            // Activo
+            // 
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            // 
             // frmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(368, 287);
+            this.ClientSize = new System.Drawing.Size(743, 207);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.grpBuscar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado";
+            this.Load += new System.EventHandler(this.frmListado_Load);
             this.grpBuscar.ResumeLayout(false);
             this.grpBuscar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -149,5 +202,11 @@
         private System.Windows.Forms.RadioButton rbPlan;
         private System.Windows.Forms.RadioButton tbCódigo;
         private System.Windows.Forms.ComboBox cmbPlan;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Plan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
     }
 }

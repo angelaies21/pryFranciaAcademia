@@ -13,8 +13,7 @@ namespace pryFranciaAcademia
     public partial class frmCargaPlan : Form
     {
         //crea la memoria y declara los espacios --> new string[4]
-        string[] arrayPlan = new string[4];
-
+        string[] arrayPlan = new string[5];
         int varIndice = 0;
 
         public frmCargaPlan()
@@ -24,16 +23,42 @@ namespace pryFranciaAcademia
 
         private void btnRegistar_Click(object sender, EventArgs e)
         {
-            
+            if (txtNomPlan.Text != "")
+            {
+                if (varIndice < 5)
+                {
+                    arrayPlan[varIndice] = txtNomPlan.Text;
+                    varIndice++;
+                    MessageBox.Show("Plan guardado");
+                    txtNomPlan.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Limite alcanzado");
+                }
+
+            }
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+           
+            lstPlanes.Items.Clear(); //lstPlanes muestra los datos
             for (int i = 0; i < arrayPlan.Length; i++)
             {
                 lstPlanes.Items.Add(arrayPlan[i]);
 
             }
+        }
+
+        private void frmCargaPlan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstPlanes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

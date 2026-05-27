@@ -16,5 +16,10 @@ namespace pryFranciaAcademia
         {
             InitializeComponent();
         }
+
+        private void frmListado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

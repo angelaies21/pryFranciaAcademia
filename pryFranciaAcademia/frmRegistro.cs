@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace pryFranciaAcademia
 {
     public partial class frmRegistro : Form
     {
+        int indiceFila = 0;
+        string[,] matMaterias = new string[4, 5];
+
         public DateTime varInicioSesion;
 
         int varCodigo;
@@ -26,20 +30,18 @@ namespace pryFranciaAcademia
 
         private void frmRegristro_Load(object sender, EventArgs e)
         {
+
+
             cmbPlan.Items.Clear();
             cmbPlan.Items.Add("Plan 1");
             cmbPlan.Items.Add("Plan 2");
             cmbPlan.Items.Add("Plan 3");
             cmbPlan.SelectedIndex = 0;
 
-            
         }
 
         private void btnRegristar_Click(object sender, EventArgs e)
         {
-            frmRegistro ventana = new frmRegistro();
-            ventana.Show();
-            this.Hide();
 
             if (txtCodigo.Text == "")
             {
@@ -58,29 +60,60 @@ namespace pryFranciaAcademia
             }
             else
             {
-                //varCodigo = Convert.ToInt32(txtCodigo.Text);
-                //varNombre = txtNombre.Text.Trim();
-                //varPlan = cmbPlan.Text;
                 
-                int indiceFila =0;
-                string[,] matMaterias = new string[2,5];
 
-                matMaterias[indiceFila,0]= txtCodigo.Text;
-                matMaterias[indiceFila, 1] = txtNombre.Text;
-                matMaterias[indiceFila, 2] = cmbPlan.Text;
 
-                if (chkActivo.Checked == true)
+                if (indiceFila < matMaterias.GetLength(0))
                 {
-                    matMaterias[indiceFila, 3] = "Activo";
-                    varActivo = true;
+                    matMaterias[indiceFila, 0] = txtCodigo.Text;
+                    matMaterias[indiceFila, 1] = txtNombre.Text;
+                    matMaterias[indiceFila, 2] = cmbPlan.Text;
+
+                    if (chkActivo.Checked == true)
+                    {
+                        matMaterias[indiceFila, 3] = "Activo";
+                        varActivo = true;
+                    }
+                    else
+                    {
+                        matMaterias[indiceFila, 3] = "Inactivo";
+                        varActivo = false;
+                    }
+                    indiceFila++;
+
+                    MessageBox.Show("Registro guardado");
+
+                    txtCodigo.Clear();
+                    txtNombre.Clear();
+                    cmbPlan.Text = "";
+                    chkActivo.Checked = false;
                 }
                 else
                 {
-                    matMaterias[indiceFila, 3] = "Inactivo";
-                    varActivo=false;
+                    MessageBox.Show("Limite alcanzado");
+                    btnRegistrar.Enabled = false;
+                    btnListado.Enabled = true;
                 }
-                indiceFila++;
-            }
+                    
+
+
+                
+            }  
+        }
+
+        private void btnPlanEstudio_Click(object sender, EventArgs e)
+        {
+            frmCargaPlan ventana = new frmCargaPlan();
+            ventana.Show();
+            this.Hide();
+
+        }
+
+        private void btnListado_Click(object sender, EventArgs e)
+        {
+            frmListado ventana = new frmListado();
+            ventana.Show();
+            this.Hide();
         }
     }
 }

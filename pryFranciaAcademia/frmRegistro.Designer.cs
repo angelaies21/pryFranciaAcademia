@@ -42,6 +42,7 @@
             this.cmbPlan = new System.Windows.Forms.ComboBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.btnPlanEstudio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -116,6 +117,7 @@
             this.btnListado.TabIndex = 7;
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = false;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
             // 
             // btnCancelar
             // 
@@ -164,18 +166,29 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 358);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 351);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(375, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(341, 22);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // btnPlanEstudio
+            // 
+            this.btnPlanEstudio.Location = new System.Drawing.Point(208, 280);
+            this.btnPlanEstudio.Name = "btnPlanEstudio";
+            this.btnPlanEstudio.Size = new System.Drawing.Size(122, 23);
+            this.btnPlanEstudio.TabIndex = 13;
+            this.btnPlanEstudio.Text = "Cargar plan de estudio";
+            this.btnPlanEstudio.UseVisualStyleBackColor = true;
+            this.btnPlanEstudio.Click += new System.EventHandler(this.btnPlanEstudio_Click);
             // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(375, 380);
+            this.ClientSize = new System.Drawing.Size(341, 373);
+            this.Controls.Add(this.btnPlanEstudio);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmbPlan);
@@ -214,5 +227,6 @@
         private System.Windows.Forms.ComboBox cmbPlan;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.Button btnPlanEstudio;
     }
 }

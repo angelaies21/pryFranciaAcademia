@@ -78,6 +78,7 @@
             this.lstPlanes.Name = "lstPlanes";
             this.lstPlanes.Size = new System.Drawing.Size(242, 95);
             this.lstPlanes.TabIndex = 5;
+            this.lstPlanes.SelectedIndexChanged += new System.EventHandler(this.lstPlanes_SelectedIndexChanged);
             // 
             // frmCargaPlan
             // 
@@ -93,6 +94,7 @@
             this.Name = "frmCargaPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCargaPlan";
+            this.Load += new System.EventHandler(this.frmCargaPlan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
