@@ -44,10 +44,13 @@ namespace pryFranciaAcademia
         {
            
             lstPlanes.Items.Clear(); //lstPlanes muestra los datos
+           
             for (int i = 0; i < arrayPlan.Length; i++)
             {
-                lstPlanes.Items.Add(arrayPlan[i]);
-
+                if (arrayPlan[i] != null)
+                {
+                    lstPlanes.Items.Add(arrayPlan[i]);
+                } 
             }
         }
 

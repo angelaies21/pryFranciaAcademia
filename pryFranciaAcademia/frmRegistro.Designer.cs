@@ -107,6 +107,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 20);
             this.txtNombre.TabIndex = 6;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnListado
             // 
@@ -122,7 +123,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancelar.Location = new System.Drawing.Point(130, 309);
+            this.btnCancelar.Location = new System.Drawing.Point(109, 309);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 31);
             this.btnCancelar.TabIndex = 8;
@@ -132,7 +133,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRegistrar.Location = new System.Drawing.Point(253, 309);
+            this.btnRegistrar.Location = new System.Drawing.Point(202, 309);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(77, 31);
             this.btnRegistrar.TabIndex = 9;
@@ -142,6 +143,8 @@
             // 
             // cmbPlan
             // 
+            this.cmbPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbPlan.FormattingEnabled = true;
             this.cmbPlan.Items.AddRange(new object[] {
             "Plan 1",
@@ -157,7 +160,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(103, 28);
+            this.linkLabel1.Location = new System.Drawing.Point(82, 26);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(161, 28);
             this.linkLabel1.TabIndex = 11;
@@ -166,15 +169,15 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 351);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 353);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(341, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(316, 22);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // btnPlanEstudio
             // 
-            this.btnPlanEstudio.Location = new System.Drawing.Point(208, 280);
+            this.btnPlanEstudio.Location = new System.Drawing.Point(169, 245);
             this.btnPlanEstudio.Name = "btnPlanEstudio";
             this.btnPlanEstudio.Size = new System.Drawing.Size(122, 23);
             this.btnPlanEstudio.TabIndex = 13;
@@ -187,7 +190,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(341, 373);
+            this.ClientSize = new System.Drawing.Size(316, 375);
             this.Controls.Add(this.btnPlanEstudio);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.linkLabel1);

@@ -23,6 +23,8 @@ namespace pryFranciaAcademia
         string varPlan;
         bool varActivo;
 
+        public string[] arrPlanes = new string[5];
+
         public frmRegistro()
         {
             InitializeComponent();
@@ -94,10 +96,6 @@ namespace pryFranciaAcademia
                     btnRegistrar.Enabled = false;
                     btnListado.Enabled = true;
                 }
-                    
-
-
-                
             }  
         }
 
@@ -112,8 +110,23 @@ namespace pryFranciaAcademia
         private void btnListado_Click(object sender, EventArgs e)
         {
             frmListado ventana = new frmListado();
-            ventana.Show();
-            this.Hide();
+
+            ventana.arrListado = matMaterias;
+            ventana.ShowDialog();
+           // this.Hide();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            cmbPlan.Items.Clear();
+            for (int i = 0; i < arrPlanes.Length; i++)
+            {
+                if(arrPlanes[i] != null)
+                {
+                    cmbPlan.Items.Add(arrPlanes[i]);
+                }
+            }
+               cmbPlan.Enabled = true; 
         }
     }
 }
