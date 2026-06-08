@@ -14,7 +14,8 @@ namespace pryFranciaAcademia
     public partial class frmRegistro : Form
     {
         int indiceFila = 0;
-        string[,] matMaterias = new string[4, 5];
+        public string[,] matMaterias = new string[4, 5];
+        public string[] arrayPlanes = new string[5];
 
         public DateTime varInicioSesion;
 
@@ -119,14 +120,38 @@ namespace pryFranciaAcademia
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             cmbPlan.Items.Clear();
-            for (int i = 0; i < arrPlanes.Length; i++)
+            for (int i = 0; i < arrayPlanes.Length; i++)
             {
-                if(arrPlanes[i] != null)
+                if(arrayPlanes[i] != null)
                 {
-                    cmbPlan.Items.Add(arrPlanes[i]);
+                    cmbPlan.Items.Add(arrayPlanes[i]);
                 }
             }
                cmbPlan.Enabled = true; 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPrincipal ventana = new frmPrincipal();
+            ventana.arrPlanes = arrPlanes;
+            ventana.matMaterias = matMaterias;
+            ventana.ShowDialog();
+        }
+
+        private void cmbPlan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtCodigo.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            cmbPlan.Enabled = false;
+            chkActivo.Enabled = false;
+            cmbPlan.Enabled = false;
+
         }
     }
 }

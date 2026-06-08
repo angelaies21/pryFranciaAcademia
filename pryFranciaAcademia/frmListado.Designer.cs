@@ -43,8 +43,11 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Plan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.volverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpBuscar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rbTodo
@@ -68,16 +71,16 @@
             this.grpBuscar.Controls.Add(this.rbPlan);
             this.grpBuscar.Controls.Add(this.tbCódigo);
             this.grpBuscar.Controls.Add(this.rbTodo);
-            this.grpBuscar.Location = new System.Drawing.Point(12, 12);
+            this.grpBuscar.Location = new System.Drawing.Point(0, 21);
             this.grpBuscar.Name = "grpBuscar";
-            this.grpBuscar.Size = new System.Drawing.Size(274, 194);
+            this.grpBuscar.Size = new System.Drawing.Size(286, 185);
             this.grpBuscar.TabIndex = 1;
             this.grpBuscar.TabStop = false;
             this.grpBuscar.Text = "Buscar";
             // 
             // btnBuscarList
             // 
-            this.btnBuscarList.Location = new System.Drawing.Point(182, 165);
+            this.btnBuscarList.Location = new System.Drawing.Point(205, 156);
             this.btnBuscarList.Name = "btnBuscarList";
             this.btnBuscarList.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarList.TabIndex = 3;
@@ -148,7 +151,7 @@
             this.Nombre,
             this.Plan,
             this.Activo});
-            this.dgvLista.Location = new System.Drawing.Point(292, 21);
+            this.dgvLista.Location = new System.Drawing.Point(292, 27);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.Size = new System.Drawing.Size(443, 150);
             this.dgvLista.TabIndex = 2;
@@ -174,6 +177,23 @@
             this.Activo.HeaderText = "Activo";
             this.Activo.Name = "Activo";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.volverToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(743, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // volverToolStripMenuItem
+            // 
+            this.volverToolStripMenuItem.Name = "volverToolStripMenuItem";
+            this.volverToolStripMenuItem.Size = new System.Drawing.Size(163, 20);
+            this.volverToolStripMenuItem.Text = "volver a la pagina prinicipal";
+            this.volverToolStripMenuItem.Click += new System.EventHandler(this.volverToolStripMenuItem_Click);
+            // 
             // frmListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,7 +202,9 @@
             this.ClientSize = new System.Drawing.Size(743, 207);
             this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.grpBuscar);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado";
@@ -190,7 +212,10 @@
             this.grpBuscar.ResumeLayout(false);
             this.grpBuscar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -210,5 +235,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Plan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem volverToolStripMenuItem;
     }
 }

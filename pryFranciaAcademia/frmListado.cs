@@ -13,6 +13,7 @@ namespace pryFranciaAcademia
     public partial class frmListado : Form
     {
         public string[,] arrListado = new string[4, 5];
+        public string[] arrayPlanes = new string[5];
         public frmListado()
         {
             InitializeComponent();
@@ -39,5 +40,14 @@ namespace pryFranciaAcademia
                 }
         }
        }
+
+        private void volverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPrincipal ventana=new frmPrincipal();
+            ventana.arrPlanes = arrayPlanes;
+            ventana.matMaterias = arrListado;
+            ventana.ShowDialog();
+        }
     }
 }

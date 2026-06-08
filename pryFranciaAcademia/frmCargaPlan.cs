@@ -12,9 +12,12 @@ namespace pryFranciaAcademia
 {
     public partial class frmCargaPlan : Form
     {
+       
         //crea la memoria y declara los espacios --> new string[4]
-        string[] arrayPlan = new string[5];
+        public string[] arrayPlan = new string[5];
+        public string[,] matMaterias = new string[4, 5];
         int varIndice = 0;
+        
 
         public frmCargaPlan()
         {
@@ -62,6 +65,15 @@ namespace pryFranciaAcademia
         private void lstPlanes_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmPrincipal ventana = new frmPrincipal();
+            ventana.arrPlanes = arrayPlan;
+            ventana.matMaterias = matMaterias;
+            ventana.ShowDialog();
         }
     }
 }

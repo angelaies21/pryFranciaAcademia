@@ -10,31 +10,26 @@ using System.Windows.Forms;
 
 namespace pryFranciaAcademia
 {
-    public partial class frmInicio : Form
+    public partial class frmAlumno : Form
     {
-        public DateTime varInicioSesion;
 
-        public frmInicio()
+        public string[] arrayPlan = new string[5];
+        public string[,] matMaterias = new string[4, 5];
+        public frmAlumno()
         {
             InitializeComponent();
         }
 
-        private void btIniciar_Click(object sender, EventArgs e)
+        private void volverALaPaginaPrinicipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-            varInicioSesion = DateTime.Now; //iniciando la variable
-            
             this.Hide();
             frmPrincipal ventana = new frmPrincipal();
+            //ventana.arrayPlan = arrPlanes;
+            ventana.matMaterias = matMaterias;
             ventana.ShowDialog();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmInicio_Load(object sender, EventArgs e)
+        private void frmAlumno_Load(object sender, EventArgs e)
         {
 
         }
