@@ -14,8 +14,8 @@ namespace pryFranciaAcademia
     public partial class frmRegistro : Form
     {
         int indiceFila = 0;
-        public string[,] matMaterias = new string[4, 5];
-        public string[] arrayPlanes = new string[5];
+        public string[,] matMaterias = new string[4, 5]; //2 dimensiones 
+        public string[] arrayPlanes = new string[5];    //1 dimension 
 
         public DateTime varInicioSesion;
 
@@ -28,18 +28,11 @@ namespace pryFranciaAcademia
 
         public frmRegistro()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void frmRegristro_Load(object sender, EventArgs e)
         {
-
-
-            cmbPlan.Items.Clear();
-            cmbPlan.Items.Add("Plan 1");
-            cmbPlan.Items.Add("Plan 2");
-            cmbPlan.Items.Add("Plan 3");
-            cmbPlan.SelectedIndex = 0;
 
         }
 
@@ -66,9 +59,9 @@ namespace pryFranciaAcademia
                 
 
 
-                if (indiceFila < matMaterias.GetLength(0))
+                if (indiceFila < matMaterias.GetLength(0)) //saca la cant de espacios q tiene la matriz
                 {
-                    matMaterias[indiceFila, 0] = txtCodigo.Text;
+                    matMaterias[indiceFila, 0] = txtCodigo.Text; //pasa lo q esta en los text box a la matriz
                     matMaterias[indiceFila, 1] = txtNombre.Text;
                     matMaterias[indiceFila, 2] = cmbPlan.Text;
 
@@ -120,9 +113,9 @@ namespace pryFranciaAcademia
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             cmbPlan.Items.Clear();
-            for (int i = 0; i < arrayPlanes.Length; i++)
+            for (int i = 0; i < arrayPlanes.Length; i++) //length es la cantida de espacio q tiewn la matriz
             {
-                if(arrayPlanes[i] != null)
+                if(arrayPlanes[i] != null) //q no este vacio
                 {
                     cmbPlan.Items.Add(arrayPlanes[i]);
                 }
@@ -146,7 +139,7 @@ namespace pryFranciaAcademia
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtCodigo.Text = string.Empty;
+            txtCodigo.Text = string.Empty; //empty vaciar el text box
             txtNombre.Text = string.Empty;
             cmbPlan.Enabled = false;
             chkActivo.Enabled = false;

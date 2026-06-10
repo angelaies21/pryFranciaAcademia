@@ -37,7 +37,7 @@
             this.txtCódigoList = new System.Windows.Forms.TextBox();
             this.rbNombre = new System.Windows.Forms.RadioButton();
             this.rbPlan = new System.Windows.Forms.RadioButton();
-            this.tbCódigo = new System.Windows.Forms.RadioButton();
+            this.rbCódigo = new System.Windows.Forms.RadioButton();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +69,7 @@
             this.grpBuscar.Controls.Add(this.txtCódigoList);
             this.grpBuscar.Controls.Add(this.rbNombre);
             this.grpBuscar.Controls.Add(this.rbPlan);
-            this.grpBuscar.Controls.Add(this.tbCódigo);
+            this.grpBuscar.Controls.Add(this.rbCódigo);
             this.grpBuscar.Controls.Add(this.rbTodo);
             this.grpBuscar.Location = new System.Drawing.Point(0, 21);
             this.grpBuscar.Name = "grpBuscar";
@@ -77,6 +77,7 @@
             this.grpBuscar.TabIndex = 1;
             this.grpBuscar.TabStop = false;
             this.grpBuscar.Text = "Buscar";
+            this.grpBuscar.Enter += new System.EventHandler(this.grpBuscar_Enter);
             // 
             // btnBuscarList
             // 
@@ -90,6 +91,7 @@
             // 
             // cmbPlanList
             // 
+            this.cmbPlanList.Enabled = false;
             this.cmbPlanList.FormattingEnabled = true;
             this.cmbPlanList.Location = new System.Drawing.Point(99, 125);
             this.cmbPlanList.Name = "cmbPlanList";
@@ -98,17 +100,21 @@
             // 
             // txtNombreList
             // 
+            this.txtNombreList.Enabled = false;
             this.txtNombreList.Location = new System.Drawing.Point(99, 83);
             this.txtNombreList.Name = "txtNombreList";
             this.txtNombreList.Size = new System.Drawing.Size(146, 20);
             this.txtNombreList.TabIndex = 5;
+            this.txtNombreList.TextChanged += new System.EventHandler(this.txtNombreList_TextChanged);
             // 
             // txtCódigoList
             // 
+            this.txtCódigoList.Enabled = false;
             this.txtCódigoList.Location = new System.Drawing.Point(99, 42);
             this.txtCódigoList.Name = "txtCódigoList";
             this.txtCódigoList.Size = new System.Drawing.Size(91, 20);
             this.txtCódigoList.TabIndex = 4;
+            this.txtCódigoList.TextChanged += new System.EventHandler(this.txtCódigoList_TextChanged);
             // 
             // rbNombre
             // 
@@ -120,6 +126,7 @@
             this.rbNombre.TabStop = true;
             this.rbNombre.Text = "Nombre";
             this.rbNombre.UseVisualStyleBackColor = true;
+            this.rbNombre.CheckedChanged += new System.EventHandler(this.rbNombre_CheckedChanged);
             // 
             // rbPlan
             // 
@@ -131,17 +138,19 @@
             this.rbPlan.TabStop = true;
             this.rbPlan.Text = "Plan";
             this.rbPlan.UseVisualStyleBackColor = true;
+            this.rbPlan.CheckedChanged += new System.EventHandler(this.rbPlan_CheckedChanged);
             // 
-            // tbCódigo
+            // rbCódigo
             // 
-            this.tbCódigo.AutoSize = true;
-            this.tbCódigo.Location = new System.Drawing.Point(13, 42);
-            this.tbCódigo.Name = "tbCódigo";
-            this.tbCódigo.Size = new System.Drawing.Size(58, 17);
-            this.tbCódigo.TabIndex = 1;
-            this.tbCódigo.TabStop = true;
-            this.tbCódigo.Text = "Código";
-            this.tbCódigo.UseVisualStyleBackColor = true;
+            this.rbCódigo.AutoSize = true;
+            this.rbCódigo.Location = new System.Drawing.Point(13, 42);
+            this.rbCódigo.Name = "rbCódigo";
+            this.rbCódigo.Size = new System.Drawing.Size(58, 17);
+            this.rbCódigo.TabIndex = 1;
+            this.rbCódigo.TabStop = true;
+            this.rbCódigo.Text = "Código";
+            this.rbCódigo.UseVisualStyleBackColor = true;
+            this.rbCódigo.CheckedChanged += new System.EventHandler(this.tbCódigo_CheckedChanged);
             // 
             // dgvLista
             // 
@@ -227,7 +236,7 @@
         private System.Windows.Forms.TextBox txtCódigoList;
         private System.Windows.Forms.RadioButton rbNombre;
         private System.Windows.Forms.RadioButton rbPlan;
-        private System.Windows.Forms.RadioButton tbCódigo;
+        private System.Windows.Forms.RadioButton rbCódigo;
         private System.Windows.Forms.ComboBox cmbPlanList;
         private System.Windows.Forms.Button btnBuscarList;
         private System.Windows.Forms.DataGridView dgvLista;

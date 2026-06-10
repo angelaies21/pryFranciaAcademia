@@ -28,9 +28,9 @@ namespace pryFranciaAcademia
         {
             if (txtNomPlan.Text != "")
             {
-                if (varIndice < 5)
+                if (varIndice < 5) //se carga datos hasta llegar a 5
                 {
-                    arrayPlan[varIndice] = txtNomPlan.Text;
+                    arrayPlan[varIndice] = txtNomPlan.Text; //textx box a la matriz
                     varIndice++;
                     MessageBox.Show("Plan guardado");
                     txtNomPlan.Clear();
@@ -48,7 +48,7 @@ namespace pryFranciaAcademia
            
             lstPlanes.Items.Clear(); //lstPlanes muestra los datos
            
-            for (int i = 0; i < arrayPlan.Length; i++)
+            for (int i = 0; i < arrayPlan.Length; i++) //length es la cantida de espacio q tiewn la matriz
             {
                 if (arrayPlan[i] != null)
                 {
