@@ -23,21 +23,9 @@ namespace pryFranciaAcademia
 
         private void frmListado_Load(object sender, EventArgs e)
         {
-            arrListado[0, 0] = "1";
-            arrListado[0, 1] = "Logica";
-            arrListado[0, 2] = "Plan 1";
-            arrListado[0, 3] = "Activo";
 
-            arrListado[1, 0] = "2";
-            arrListado[1, 1] = "matemàtica";
-            arrListado[1, 2] = "Plan 2";
-            arrListado[1, 3] = "Activo";
-
-            arrListado[2, 0] = "3";
-            arrListado[2, 1] = "física";
-            arrListado[2, 2] = "Plan 3";
-            arrListado[2, 3] = "InActivo";
         }
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -82,10 +70,6 @@ namespace pryFranciaAcademia
             }
 
         }
-
-
-                
-
 
         private void volverToolStripMenuItem_Click(object sender, EventArgs e)
         {

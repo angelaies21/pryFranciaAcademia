@@ -146,5 +146,10 @@ namespace pryFranciaAcademia
             cmbPlan.Enabled = false;
 
         }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
