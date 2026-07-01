@@ -93,6 +93,9 @@
             // 
             this.cmbPlanList.Enabled = false;
             this.cmbPlanList.FormattingEnabled = true;
+            this.cmbPlanList.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
             this.cmbPlanList.Location = new System.Drawing.Point(99, 125);
             this.cmbPlanList.Name = "cmbPlanList";
             this.cmbPlanList.Size = new System.Drawing.Size(146, 21);
