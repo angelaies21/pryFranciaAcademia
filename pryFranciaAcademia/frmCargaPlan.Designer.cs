@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargaPlan));
             this.lblPlan = new System.Windows.Forms.Label();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnRegistar = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@
             this.txtNomPlan.Name = "txtNomPlan";
             this.txtNomPlan.Size = new System.Drawing.Size(145, 20);
             this.txtNomPlan.TabIndex = 3;
+            this.txtNomPlan.TextChanged += new System.EventHandler(this.txtNomPlan_TextChanged);
             // 
             // lstPlanes
             // 
@@ -89,14 +91,14 @@
             this.btnVolver});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(282, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(282, 25);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnVolver
             // 
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(160, 20);
+            this.btnVolver.Size = new System.Drawing.Size(179, 21);
             this.btnVolver.Text = "Volver a la pagina principal";
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
@@ -112,10 +114,11 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.lblPlan);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmCargaPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCargaPlan";
+            this.Text = "Carga de Planes";
             this.Load += new System.EventHandler(this.frmCargaPlan_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

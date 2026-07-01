@@ -12,12 +12,12 @@ namespace pryFranciaAcademia
 {
     public partial class frmPrincipal : Form
     {
-        public string[] arrPlanes = new string[5];
-        public string[,] matMaterias = new string[4, 5];
+        public string[] arrPlanes = new string[5]; //array o vector
+        public string[,] matMaterias = new string[4, 5]; //MATRIZ
         public frmPrincipal()
         {
             InitializeComponent();
-        }
+        } 
 
         private void mstPrincipal_Click(object sender, EventArgs e)
         {
@@ -43,16 +43,18 @@ namespace pryFranciaAcademia
             ventana.arrayPlanes = arrPlanes;
             ventana.matMaterias = matMaterias;
             ventana.ShowDialog();
-        }
+        } 
 
         private void btnPlan_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmCargaPlan ventana = new frmCargaPlan();
+            frmCargaPlan ventana = new frmCargaPlan(); //Crea un nuevo form y lo guarda en la variable
             ventana.arrayPlan = arrPlanes;
             ventana.matMaterias = matMaterias;
             ventana.ShowDialog();
         }
+
+
 
         private void btnListado_Click(object sender, EventArgs e)
         {
@@ -64,6 +66,11 @@ namespace pryFranciaAcademia
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

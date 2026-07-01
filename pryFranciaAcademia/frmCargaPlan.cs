@@ -75,5 +75,10 @@ namespace pryFranciaAcademia
             ventana.matMaterias = matMaterias;
             ventana.ShowDialog();
         }
+
+        private void txtNomPlan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,7 +39,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-4, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 253);
+            this.pictureBox1.Size = new System.Drawing.Size(361, 337);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -49,9 +49,9 @@
             // 
             this.btIniciar.BackColor = System.Drawing.Color.Honeydew;
             this.btIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btIniciar.Location = new System.Drawing.Point(75, 173);
+            this.btIniciar.Location = new System.Drawing.Point(105, 230);
             this.btIniciar.Name = "btIniciar";
-            this.btIniciar.Size = new System.Drawing.Size(96, 31);
+            this.btIniciar.Size = new System.Drawing.Size(121, 40);
             this.btIniciar.TabIndex = 1;
             this.btIniciar.Text = "Iniciar";
             this.btIniciar.UseVisualStyleBackColor = false;
@@ -62,7 +62,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(255, 255);
+            this.ClientSize = new System.Drawing.Size(354, 336);
             this.Controls.Add(this.btIniciar);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

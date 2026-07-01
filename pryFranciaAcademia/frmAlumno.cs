@@ -43,8 +43,7 @@ namespace pryFranciaAcademia
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            lstAlumnos.Visible = true;
-
+            
             // guarda los datos de los txt en la matriz
             matMaterias[0, 0] = txtDni.Text;
             matMaterias[0, 1] = txtNombre.Text;
@@ -53,16 +52,6 @@ namespace pryFranciaAcademia
             matMaterias[0, 4] = txtContacto.Text;
             matMaterias[0, 5] = dtpFecha.Text;
 
-
-            lstAlumnos.Items.Clear();
-
-            for (int fila = 0; fila < matMaterias.GetLength(0); fila++)
-            {
-                if (matMaterias[fila, 0] != null)
-                {
-                    lstAlumnos.Items.Add(matMaterias[fila, 0] + " / " + matMaterias[fila, 1] + " / " + matMaterias[fila, 2] + " / " + matMaterias[fila, 3] + " / " + matMaterias[fila, 4] + " / " + matMaterias[fila, 5] + " / ");
-                }
-            }
 
             if (txtDni.Text == "")
             {
@@ -123,7 +112,7 @@ namespace pryFranciaAcademia
             txtContacto.Text = string.Empty; 
             dtpFecha.Enabled = false;
 
-            lstAlumnos.Items.Clear();
+            
             MessageBox.Show("Alumno eliminado.");
         }
 
@@ -148,10 +137,12 @@ namespace pryFranciaAcademia
             matMaterias[0, 4] = txtContacto.Text;
             matMaterias[0, 5] = dtpFecha.Text;
 
-            lstAlumnos.Items.Clear();
-            lstAlumnos.Items.Add(matMaterias[0, 0] + " / " + matMaterias[0, 1] + " / " + matMaterias[0, 2] + " / " + matMaterias[0, 3] + " / " + matMaterias[0, 4] + " / " + matMaterias[0, 5] + " / ");
-
             MessageBox.Show("Alumno editado");
+
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

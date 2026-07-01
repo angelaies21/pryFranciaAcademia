@@ -42,7 +42,7 @@ namespace pryFranciaAcademia
             if (txtCodigo.Text == "")
             {
                 MessageBox.Show("Ingrese el código.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCodigo.Focus();
+                txtCodigo.Focus(); //coloca el cursor en el indicado
             }
             else if (txtNombre.Text == "")
             {
@@ -57,17 +57,17 @@ namespace pryFranciaAcademia
             else
             {
                 
+                // pregunta si todavia hay espacio en la matriz
 
-
-                if (indiceFila < matMaterias.GetLength(0)) //saca la cant de espacios q tiene la matriz
+                if (indiceFila < matMaterias.GetLength(0)) //saca la cant de espacios q tiene la matriz,, si td hay filas disp continua
                 {
                     matMaterias[indiceFila, 0] = txtCodigo.Text; //pasa lo q esta en los text box a la matriz
                     matMaterias[indiceFila, 1] = txtNombre.Text;
                     matMaterias[indiceFila, 2] = cmbPlan.Text;
 
-                    if (chkActivo.Checked == true)
+                    if (chkActivo.Checked == true) //  checkBox si esta marcando entra al if
                     {
-                        matMaterias[indiceFila, 3] = "Activo";
+                        matMaterias[indiceFila, 3] = "Activo"; // guarda la palabra activo en la columna 3
                         varActivo = true;
                     }
                     else
@@ -117,7 +117,7 @@ namespace pryFranciaAcademia
             {
                 if(arrayPlanes[i] != null) //q no este vacio
                 {
-                    cmbPlan.Items.Add(arrayPlanes[i]);
+                    cmbPlan.Items.Add(arrayPlanes[i]); // agg ese plan al combobox
                 }
             }
                cmbPlan.Enabled = true; 
