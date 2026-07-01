@@ -113,7 +113,7 @@ namespace pryFranciaAcademia
             dtpFecha.Enabled = false;
 
             
-            MessageBox.Show("Alumno eliminado.");
+            MessageBox.Show("Alumno eliminado.", " Eliminado ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void txtDni_TextChanged(object sender, EventArgs e)
@@ -137,7 +137,8 @@ namespace pryFranciaAcademia
             matMaterias[0, 4] = txtContacto.Text;
             matMaterias[0, 5] = dtpFecha.Text;
 
-            MessageBox.Show("Alumno editado");
+            MessageBox.Show("Alumno editado"," Aviso ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            
 
         }
 

@@ -77,7 +77,7 @@ namespace pryFranciaAcademia
                     }
                     indiceFila++;
 
-                    MessageBox.Show("Registro guardado");
+                    MessageBox.Show("Registro guardado", " Dato guardado ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     txtCodigo.Clear();
                     txtNombre.Clear();
@@ -86,7 +86,7 @@ namespace pryFranciaAcademia
                 }
                 else
                 {
-                    MessageBox.Show("Limite alcanzado");
+                    MessageBox.Show("Limite alcanzado"," Aviso ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     btnRegistrar.Enabled = false;
                     btnListado.Enabled = true;
                 }

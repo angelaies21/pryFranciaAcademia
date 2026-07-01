@@ -32,12 +32,13 @@ namespace pryFranciaAcademia
                 {
                     arrayPlan[varIndice] = txtNomPlan.Text; //textx box a la matriz
                     varIndice++;
-                    MessageBox.Show("Plan guardado");
+                    MessageBox.Show("Plan guardado", "Dato guardado ",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtNomPlan.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("Limite alcanzado");
+                    MessageBox.Show("Limite alcanzado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
 
             }

@@ -93,9 +93,6 @@
             // 
             this.cmbPlanList.Enabled = false;
             this.cmbPlanList.FormattingEnabled = true;
-            this.cmbPlanList.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
             this.cmbPlanList.Location = new System.Drawing.Point(99, 125);
             this.cmbPlanList.Name = "cmbPlanList";
             this.cmbPlanList.Size = new System.Drawing.Size(146, 21);
@@ -219,7 +216,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Listado";
+            this.Text = "Listados";
             this.Load += new System.EventHandler(this.frmListado_Load);
             this.grpBuscar.ResumeLayout(false);
             this.grpBuscar.PerformLayout();
